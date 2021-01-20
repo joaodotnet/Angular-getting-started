@@ -35,10 +35,10 @@ namespace AccountOwnerServer.Extensions
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
 
-        public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config) 
-        { 
-            var connectionString = config["mysqlconnection:connectionString"]; 
-            services.AddDbContext<RepositoryContext>(o => o.UseMySql(connectionString)); 
+        public static void ConfigureSqlServerContext(this IServiceCollection services, IConfiguration config) 
+        {
+            services.AddDbContext<RepositoryContext>(c =>
+              c.UseSqlServer(config.GetConnectionString("AppDbConnection")));
         }
 
         public static void ConfigureRepositoryWrapper(this IServiceCollection services) 

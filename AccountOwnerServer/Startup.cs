@@ -26,7 +26,7 @@ namespace AccountOwnerServer
             services.ConfigureCors();
             services.ConfigureIISIntegration();
             services.ConfigureLoggerService();
-            services.ConfigureMySqlContext(Configuration);
+            services.ConfigureSqlServerContext(Configuration);
             services.ConfigureRepositoryWrapper();
             services.AddAutoMapper(typeof(Startup));
 
