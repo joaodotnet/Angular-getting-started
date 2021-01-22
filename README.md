@@ -3,3 +3,7 @@
 https://code-maze.com/angular-series/
 
 Notes: Additional I add the Web API Server to this repo.
+
+Server is in AccountOwnerServer folder
+Client/Angular project is in AccountOwnerClient folder
+The others are shared libraries (put it only used in server projet)
