@@ -36,14 +36,10 @@
                 </div>
             </div>
             <br><br>
-            <div class="form-group">
-                <div class="col-md-offset-5 col-md-1">
-                    <button type="submit" class="btn btn-info" [disabled]="!ownerForm.valid">Update</button>
-                </div>
-                <div class="col-md-1">
-                    <button type="button" class="btn btn-danger" (click)="redirectToOwnerList()">Cancel</button>
-                </div>
-            </div>
+            <div class="btn-group">
+                <button type="submit" class="btn btn-info col-md-1" [disabled]="!ownerForm.valid">Update</button>
+                <button type="button" class="btn btn-danger ml-1 col-md-1" (click)="redirectToOwnerList()">Cancel</button>
+            </div>            
         </div>
     </form>
     <app-success-modal [modalHeaderText]="'Success message'" [modalBodyText]="'Action completed successfully'"

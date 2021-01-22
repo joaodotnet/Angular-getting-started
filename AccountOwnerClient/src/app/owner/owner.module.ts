@@ -7,11 +7,12 @@ import { SharedModule } from '../shared/shared.module';
 import { OwnerCreateComponent } from './owner-create/owner-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OwnerUpdateComponent } from './owner-update/owner-update.component';
+import { OwnerDeleteComponent } from './owner-delete/owner-delete.component';
 
 
 
 @NgModule({
-  declarations: [OwnerListComponent, OwnerDetailsComponent, OwnerCreateComponent, OwnerUpdateComponent],
+  declarations: [OwnerListComponent, OwnerDetailsComponent, OwnerCreateComponent, OwnerUpdateComponent, OwnerDeleteComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -20,7 +21,8 @@ import { OwnerUpdateComponent } from './owner-update/owner-update.component';
       { path: 'list', component: OwnerListComponent },
       { path: 'details/:id', component: OwnerDetailsComponent },
       { path: 'create', component: OwnerCreateComponent },
-      { path: 'update/:id', component: OwnerUpdateComponent }
+      { path: 'update/:id', component: OwnerUpdateComponent },
+      { path: 'delete/:id', component: OwnerDeleteComponent }
     ])
   ]
 })
